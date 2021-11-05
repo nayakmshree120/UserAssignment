@@ -1,0 +1,116 @@
+<html>
+<head>
+    <title>User Details</title>
+    <style>
+      table{
+        width: 80%;
+        margin: 40px auto;
+        background-color:rgb(229, 173, 147) ;
+      }
+      table .tbl{
+        text-align: center;
+        width: 100%;
+      }
+      td{
+        text-align: left;
+        border: 2px solid ;
+        padding: 8px 15px;
+      }
+      #addbtn{
+        border-radius: 30px;
+        padding: 6px 12px;
+        margin: 20px;
+        background-color: seagreen;
+      }
+      input[type="text"],input[type="number"] {
+        display: inline-block;
+        padding: 10px 5px;
+        margin: 8px 3px;
+        border-radius: 5px;
+      }
+      form{
+        font-weight: bolder;
+        font-size: 20px;
+        margin: 12px;
+        padding: 5px;
+        background-color:khaki;
+        color:darkgreen;
+        
+        text-align: center;
+      }
+      span{
+        color: red;
+        display: block;
+      }
+      table  thead>tr{
+        background-color:skyblue;
+        color: orangered;
+        font-size: 20px;
+      }
+      tbody tr td{
+        font-weight: bold;
+        font-size: 17px;
+        color:rgb(50, 67, 224);
+        text-align: center;
+      }
+      
+    </style>
+</head>
+<body>
+    
+<div >
+ <form autocomplete="off" onsubmit="return onFormSubmit()" >
+    <div>
+        <label for="name">Name:</label>
+        <div>
+          <input type="text" name="name" id="name"  placeholder="enter name"   />
+          <span id="nameErr"></span>
+          </div>
+      </div>
+      <div>
+        <label for="age">Age:</label>
+        <div>
+          <input type="number" name="age" id="age"  placeholder="enter age"    />
+          <span id="ageErr"></span>
+          </div>
+      </div>
+      <div>
+        <label for="date">Date of birth:</label>
+        <div>
+          <input type="date" name="date" id="date" placeholder="enter date of birth"   />
+          <span id="dateErr"></span>
+          </div>
+      </div> <br> <br>
+      <div>
+        <label for="gender">Gender:</label>
+        <div id="genderr">
+          <input type="radio" name="gender" value="male"  />Male
+          <input type="radio" name="gender" value="female" />Female
+          <span id="genErr"></span>
+          </div>
+      </div>
+      <div>
+        <input type="submit"  id="addbtn" value="ADD">
+      </div>
+ </form>
+  
+ 
+
+ <table class="tbl" id="list" border="3" >
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Date Of Birth</th>
+        <th>Gender</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+    </table>
+</div>
+
+<script type="text/javascript" src="./user.js"></script>
+</body>
+</html>
